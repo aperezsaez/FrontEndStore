@@ -1,0 +1,86 @@
+:root {
+    --primario: #9c27b0;
+    --primarioOscuro: #89119D;
+    --secundario: #FFCE00;
+    --secundarioOscuro: rgb(233,187,2);
+    --blanco: #FFF;
+    --negro: #000;
+
+    --fuente-principal: 'Comic Neue', cursive;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+/*Globales*/
+body {
+    background-color: var(--primario);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+
+a {text-decoration: none;}
+
+img {max-width: 100%;}
+
+.contendor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: var(--secundario);
+    font-family: var(--fuente-principal);
+}
+
+h1 {font-size: 4rem;}
+
+h2 {font-size: 3.2rem;}
+
+h3 {font-size: 2.4rem;}
+
+/*Block Element Modifier*/
+
+/*Bloques contenedores independientes*/
+/*Pertenencen a bloques y elementos tienen doble _*/
+/* Modificares, se utiliza como una bandera que tendrá algo diferente con --  */
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.header__logo{
+    margin: 3rem 0;
+}
+
+.navbar {
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.navbar__link{
+    font-family: var(--fuente-principal);
+    color: var(--blanco);
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.navbar__link--active,
+.navbar__link:hover {
+    color: var(--secundario)
+}
